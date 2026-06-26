@@ -1,0 +1,831 @@
+========== cortex/page.tsx ==========
+import type { Metadata } from "next";
+import { Navbar } from "@/components/neurality/navbar";
+import { Footer } from "@/components/neurality/footer";
+import { BackToTop } from "@/components/neurality/back-to-top";
+import { Reveal } from "@/components/neurality/reveal";
+
+export const metadata: Metadata = {
+  title: "Cortex 4.6 — Neurality",
+  description:
+    "Introducing Cortex 4.6 — the powerful model for chatting and coding. Coming soon from Neurality.",
+};
+
+export default function CortexPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section className="product-page-hero">
+          <div className="container hero-inner">
+            <Reveal>
+              <span className="badge badge-dev" style={{ marginBottom: 28 }}>
+                <span className="badge-dot" />
+                Coming soon
+              </span>
+            </Reveal>
+            <Reveal>
+              <h1 className="product-page-title">Introducing Cortex 4.6</h1>
+            </Reveal>
+            <Reveal>
+              <p className="product-page-sub">
+                The powerful model for chatting and coding.
+              </p>
+            </Reveal>
+            <Reveal>
+              <p className="product-page-body">
+                {/* NOTE: placeholder copy — replace with real model details before launch */}
+                Cortex 4.6 is designed for fast, fluid conversation and capable
+                coding assistance in a single model. Whether you&apos;re drafting
+                ideas, debugging code, or exploring complex topics, Cortex 4.6
+                meets you where you are and keeps up.
+              </p>
+            </Reveal>
+          </div>
+          <div className="hero-glow" aria-hidden="true" />
+        </section>
+
+        {/* Feature cards */}
+        {/* NOTE: placeholder feature cards — replace with verified specs before launch */}
+        <section className="section">
+          <div className="container">
+            <Reveal className="section-head">
+              <span className="section-tag">Capabilities</span>
+              <h2 className="section-title">Built for what you do</h2>
+              <p className="section-subtitle">
+                A single model that handles conversation and code without
+                switching contexts.
+              </p>
+            </Reveal>
+
+            <div className="product-features-grid">
+              <Reveal index={0}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Natural conversation</h3>
+                  <p className="feature-card-desc">
+                    Engage in long, coherent discussions. Cortex 4.6 maintains
+                    context across complex exchanges and responds with clarity.
+                  </p>
+                </article>
+              </Reveal>
+
+              <Reveal index={1}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Strong at code</h3>
+                  <p className="feature-card-desc">
+                    Write, review, and debug code across popular languages.
+                    Cortex 4.6 understands structure and intent, not just syntax.
+                  </p>
+                </article>
+              </Reveal>
+
+              <Reveal index={2}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 6h16M4 12h16M4 18h10"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Long context</h3>
+                  <p className="feature-card-desc">
+                    Work with large documents, codebases, and extended
+                    conversations without losing the thread.
+                  </p>
+                </article>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Coming soon notice */}
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <Reveal>
+              <div className="product-coming-soon">
+                <p className="product-coming-soon-title">Coming soon</p>
+                <p className="product-coming-soon-text">
+                  Cortex 4.6 is currently in development. We&apos;ll announce
+                  availability here and across our channels when it&apos;s
+                  ready.
+                </p>
+                <a href="/#products" className="btn btn-ghost">
+                  ← Back to Products
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Closing wordmark */}
+        <div className="container">
+          <p className="model-wordmark" aria-hidden="true">Cortex</p>
+        </div>
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
+  );
+}
+
+========== cortexcode/page.tsx ==========
+import type { Metadata } from "next";
+import { Navbar } from "@/components/neurality/navbar";
+import { Footer } from "@/components/neurality/footer";
+import { BackToTop } from "@/components/neurality/back-to-top";
+import { Reveal } from "@/components/neurality/reveal";
+
+export const metadata: Metadata = {
+  title: "Cortex Code — Neurality",
+  description:
+    "Introducing Cortex Code — a new model and code mode built for subagents, deep repo context, and fast iteration.",
+};
+
+export default function CortexCodePage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section className="product-page-hero">
+          <div className="container hero-inner">
+            <Reveal>
+              <span className="badge badge-online" style={{ marginBottom: 28 }}>
+                <span className="badge-dot" />
+                Now available
+              </span>
+            </Reveal>
+            <Reveal>
+              <h1 className="product-page-title">Introducing Cortex Code</h1>
+            </Reveal>
+            <Reveal>
+              <p className="product-page-sub">
+                A new model and code mode has arrived.
+              </p>
+            </Reveal>
+            <Reveal>
+              <p className="product-page-body">
+                {/*
+                  NOTE: "and more…" below resolved with placeholder specifics.
+                  Replace with the real feature list before launch.
+                */}
+                Cortex 4.7 Code supports subagents and more — including deeper
+                repository awareness that spans files and history, and a faster
+                iteration loop so you spend less time waiting and more time
+                building.
+              </p>
+            </Reveal>
+            <Reveal>
+              <div style={{ marginTop: 32 }}>
+                <a href="/cortex" className="btn btn-primary">
+                  Try Cortex
+                  <svg viewBox="0 0 24 24" width={18} height={18} aria-hidden="true">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M13 6l6 6-6 6"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </Reveal>
+          </div>
+          <div className="hero-glow" aria-hidden="true" />
+        </section>
+
+        {/* Feature cards */}
+        {/* NOTE: placeholder feature cards — replace with real verified specs before launch */}
+        <section className="section">
+          <div className="container">
+            <Reveal className="section-head">
+              <span className="section-tag">What&apos;s new in 4.7</span>
+              <h2 className="section-title">Code mode, upgraded</h2>
+              <p className="section-subtitle">
+                Cortex Code goes beyond autocomplete — it understands your
+                project and works alongside you.
+              </p>
+            </Reveal>
+
+            <div className="product-features-grid">
+              <Reveal index={0}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.8 5.7 21l2.3-7.2-6-4.4h7.6z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Subagents</h3>
+                  <p className="feature-card-desc">
+                    Spin up focused subagents to tackle specific parts of a
+                    task in parallel — Cortex Code coordinates and consolidates
+                    the results.
+                  </p>
+                </article>
+              </Reveal>
+
+              <Reveal index={1}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 7h18M3 12h18M3 17h12"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Repo-aware context</h3>
+                  <p className="feature-card-desc">
+                    Understands your repository across files, branches, and
+                    history — so suggestions are grounded in your actual
+                    codebase, not generic patterns.
+                  </p>
+                </article>
+              </Reveal>
+
+              <Reveal index={2}>
+                <article className="card feature-card">
+                  <div className="feature-card-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width={22} height={22}>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="feature-card-title">Faster code mode</h3>
+                  <p className="feature-card-desc">
+                    Optimised for low latency during active editing sessions.
+                    Get results quickly without sacrificing depth when it
+                    matters.
+                  </p>
+                </article>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Closing wordmark */}
+        <div className="container">
+          <p className="model-wordmark" aria-hidden="true">Cortex</p>
+        </div>
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
+  );
+}
+
+========== terms/page.tsx ==========
+import type { Metadata } from "next";
+import { Navbar } from "@/components/neurality/navbar";
+import { Footer } from "@/components/neurality/footer";
+import { BackToTop } from "@/components/neurality/back-to-top";
+
+export const metadata: Metadata = {
+  title: "Terms of Service — Neurality",
+  description: "Terms of Service for Neurality-Inc products and services.",
+};
+
+export default function TermsPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <div className="legal-page">
+          {/*
+            IMPORTANT: This is template legal boilerplate, not legal advice.
+            Have a qualified attorney review this document before relying on it in production.
+          */}
+          <h1>Terms of Service</h1>
+          <p className="legal-updated">Effective date: June 1, 2026</p>
+
+          <div className="legal-notice">
+            <strong>Note:</strong> This document is template legal boilerplate
+            provided for informational purposes only. It is not legal advice.
+            Neurality-Inc recommends having a qualified attorney review these
+            terms before relying on them in production.
+          </div>
+
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By accessing or using any product, service, website, bot, or
+            application provided by Neurality-Inc ("Neurality," "we," "us," or
+            "our"), you agree to be bound by these Terms of Service ("Terms").
+            If you do not agree to these Terms, you may not use our services.
+          </p>
+          <p>
+            These Terms apply to all visitors, users, and others who access or
+            use our services, including but not limited to Axion, Cortex,
+            Cortex Code, Xyrox, and birat.gg (collectively, "Services").
+          </p>
+
+          <h2>2. Description of Service</h2>
+          <p>
+            Neurality-Inc builds and maintains AI tools, Discord bots, and
+            modern web applications. Our Services include:
+          </p>
+          <ul>
+            <li>
+              <strong>Axion</strong> — a free Discord bot providing automod,
+              anti-nuke, and server management capabilities.
+            </li>
+            <li>
+              <strong>Cortex / Cortex Code</strong> — AI chat and coding
+              products currently in development (see Section 6).
+            </li>
+            <li>
+              <strong>Xyrox</strong> — an open-source tool maintained on a
+              best-effort basis (see Section 6).
+            </li>
+            <li>
+              <strong>birat.gg</strong> — a Discord music bot currently in
+              development (see Section 6).
+            </li>
+          </ul>
+          <p>
+            We reserve the right to modify, suspend, or discontinue any part of
+            the Services at any time, with or without notice. We will not be
+            liable to you or any third party for any modification, suspension,
+            or discontinuation.
+          </p>
+
+          <h2>3. Accounts &amp; Eligibility</h2>
+          <p>
+            Some of our Services may require you to create an account. You must
+            be at least 13 years old (or the minimum age required by your
+            jurisdiction) to use our Services. By using the Services, you
+            represent and warrant that you meet this requirement.
+          </p>
+          <p>
+            You are responsible for maintaining the confidentiality of your
+            account credentials and for all activity that occurs under your
+            account. You agree to notify us immediately of any unauthorised use
+            of your account at{" "}
+            <a
+              href="mailto:support@neurality.dev"
+              style={{ color: "var(--accent)" }}
+            >
+              support@neurality.dev
+            </a>
+            .
+          </p>
+
+          <h2>4. Acceptable Use</h2>
+          <p>
+            You agree not to use the Services to:
+          </p>
+          <ul>
+            <li>
+              Violate any applicable law or regulation, including those governing
+              export controls, privacy, or consumer protection.
+            </li>
+            <li>
+              Harass, abuse, threaten, defame, or otherwise harm other users or
+              third parties.
+            </li>
+            <li>
+              Distribute spam, malware, or any other harmful or disruptive
+              content.
+            </li>
+            <li>
+              Attempt to gain unauthorised access to any part of the Services or
+              their underlying infrastructure.
+            </li>
+            <li>
+              Scrape, crawl, or otherwise extract data from the Services in a
+              manner that places undue load on our systems.
+            </li>
+            <li>
+              Impersonate Neurality-Inc, its employees, or any other person or
+              entity.
+            </li>
+            <li>
+              Use the Services for any purpose that we, in our sole discretion,
+              deem inappropriate or contrary to these Terms.
+            </li>
+          </ul>
+
+          <h2>5. Intellectual Property</h2>
+          <p>
+            The Services and their original content, features, and
+            functionality are and will remain the exclusive property of
+            Neurality-Inc and its licensors. Our trademarks and trade dress may
+            not be used in connection with any product or service without our
+            prior written consent.
+          </p>
+          <p>
+            Content you submit through the Services remains yours. By
+            submitting content, you grant Neurality-Inc a non-exclusive,
+            worldwide, royalty-free licence to use, reproduce, and display that
+            content solely as necessary to provide the Services.
+          </p>
+
+          <h2>6. Third-Party Products &amp; Development Status</h2>
+          <p>
+            Several Neurality products are in varying stages of development:
+          </p>
+          <ul>
+            <li>
+              <strong>Cortex 4.6 &amp; Cortex Code 4.7</strong> are currently
+              in development and not yet publicly released. Features described
+              on our website are subject to change.
+            </li>
+            <li>
+              <strong>birat.gg</strong> is in active development. Functionality
+              may be limited or subject to significant change.
+            </li>
+            <li>
+              <strong>Xyrox</strong> is an open-source tool that is no longer
+              actively maintained. It is provided as-is, without warranty or
+              ongoing support.
+            </li>
+            <li>
+              <strong>Axion</strong> is operational but may undergo maintenance
+              or updates that temporarily affect availability.
+            </li>
+          </ul>
+          <p>
+            We make no representations about the readiness, completeness, or
+            fitness for purpose of any product described as "in development" or
+            "coming soon."
+          </p>
+
+          <h2>7. Disclaimers &amp; "As-Is" Service</h2>
+          <p>
+            THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
+            WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT
+            NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+            PARTICULAR PURPOSE, NON-INFRINGEMENT, OR UNINTERRUPTED OR
+            ERROR-FREE OPERATION.
+          </p>
+          <p>
+            We do not warrant that the Services will be available at all times,
+            that defects will be corrected, or that the Services or servers
+            that make them available are free of viruses or other harmful
+            components.
+          </p>
+
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, NEURALITY-INC
+            AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND LICENSORS
+            SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+            CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS,
+            DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR
+            IN CONNECTION WITH YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS
+            OR USE) THE SERVICES.
+          </p>
+          <p>
+            IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU
+            PAID TO US IN THE TWELVE (12) MONTHS PRIOR TO THE EVENT GIVING RISE
+            TO THE CLAIM, OR ONE HUNDRED US DOLLARS (USD $100), WHICHEVER IS
+            GREATER.
+          </p>
+
+          <h2>9. Termination</h2>
+          <p>
+            We may terminate or suspend your access to the Services immediately,
+            without prior notice or liability, for any reason, including if you
+            breach these Terms. Upon termination, your right to use the Services
+            ceases immediately.
+          </p>
+          <p>
+            You may stop using the Services at any time. If you have an account,
+            you may request deletion by contacting us at{" "}
+            <a
+              href="mailto:support@neurality.dev"
+              style={{ color: "var(--accent)" }}
+            >
+              support@neurality.dev
+            </a>
+            .
+          </p>
+
+          <h2>10. Changes to These Terms</h2>
+          <p>
+            We reserve the right to modify these Terms at any time. If we make
+            material changes, we will update the "Effective date" at the top of
+            this page and may provide additional notice through our Services or
+            via email. Your continued use of the Services after changes become
+            effective constitutes your acceptance of the revised Terms.
+          </p>
+
+          <h2>11. Contact</h2>
+          <p>
+            If you have questions about these Terms, please contact us at:
+          </p>
+          <p>
+            <strong>Neurality-Inc</strong>
+            <br />
+            Email:{" "}
+            <a
+              href="mailto:legal@neurality.dev"
+              style={{ color: "var(--accent)" }}
+            >
+              legal@neurality.dev
+            </a>
+          </p>
+        </div>
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
+  );
+}
+
+========== privacy/page.tsx ==========
+import type { Metadata } from "next";
+import { Navbar } from "@/components/neurality/navbar";
+import { Footer } from "@/components/neurality/footer";
+import { BackToTop } from "@/components/neurality/back-to-top";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — Neurality",
+  description: "Privacy Policy for Neurality-Inc products and services.",
+};
+
+export default function PrivacyPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <div className="legal-page">
+          {/*
+            IMPORTANT: This is template legal boilerplate, not legal advice.
+            Have a qualified attorney review this document before relying on it in production.
+          */}
+          <h1>Privacy Policy</h1>
+          <p className="legal-updated">Effective date: June 1, 2026</p>
+
+          <div className="legal-notice">
+            <strong>Note:</strong> This document is template legal boilerplate
+            provided for informational purposes only. It is not legal advice.
+            Neurality-Inc recommends having a qualified attorney review this
+            policy before relying on it in production.
+          </div>
+
+          <p>
+            Neurality-Inc ("Neurality," "we," "us," or "our") is committed to
+            protecting your privacy. This Privacy Policy explains how we
+            collect, use, share, and safeguard information when you use our
+            products, services, websites, bots, and applications (collectively,
+            "Services"). By using our Services, you agree to the collection and
+            use of information in accordance with this policy.
+          </p>
+
+          <h2>1. Information We Collect</h2>
+          <p>
+            We may collect the following categories of information:
+          </p>
+          <ul>
+            <li>
+              <strong>Account information:</strong> When you register for an
+              account, we collect your username, email address, and password
+              (stored as a secure hash).
+            </li>
+            <li>
+              <strong>Usage data:</strong> We automatically collect information
+              about how you interact with our Services, including pages visited,
+              features used, and timestamps.
+            </li>
+            <li>
+              <strong>Discord data:</strong> When you add one of our Discord
+              bots (Axion, birat.gg) to a server, we may receive your Discord
+              user ID, server ID, and messages sent in channels where the bot
+              is active, solely to provide the requested functionality.
+            </li>
+            <li>
+              <strong>Communications:</strong> If you contact us for support or
+              via email, we retain those communications to help resolve your
+              inquiry.
+            </li>
+            <li>
+              <strong>Device and technical data:</strong> We may collect your
+              IP address, browser type, operating system, and device identifiers
+              for security and diagnostic purposes.
+            </li>
+          </ul>
+          <p>
+            We do not intentionally collect sensitive personal data such as
+            financial information, government ID numbers, or health data. Please
+            do not submit such information through our Services.
+          </p>
+
+          <h2>2. How We Use Information</h2>
+          <p>
+            We use the information we collect to:
+          </p>
+          <ul>
+            <li>Provide, operate, and improve our Services.</li>
+            <li>
+              Authenticate users and maintain account security.
+            </li>
+            <li>
+              Respond to support requests and communicate with you about your
+              account or our Services.
+            </li>
+            <li>
+              Monitor usage patterns to understand how our Services are used
+              and to inform product decisions.
+            </li>
+            <li>
+              Detect, investigate, and prevent fraudulent activity, abuse, and
+              violations of our Terms of Service.
+            </li>
+            <li>
+              Comply with legal obligations and enforce our policies.
+            </li>
+          </ul>
+          <p>
+            We do not sell your personal information to third parties, and we
+            do not use it for targeted advertising.
+          </p>
+
+          <h2>3. Cookies &amp; Analytics</h2>
+          <p>
+            We may use cookies and similar tracking technologies to maintain
+            session state, remember your preferences, and analyse aggregate
+            usage of our Services. You can configure your browser to refuse all
+            cookies or to alert you when cookies are being sent; however, some
+            features of our Services may not function properly without them.
+          </p>
+          <p>
+            We may use third-party analytics tools (such as privacy-focused
+            analytics software) to collect aggregated, anonymised data about
+            how users navigate our Services. These tools do not receive
+            information that identifies you personally.
+          </p>
+
+          <h2>4. Data Sharing &amp; Third Parties</h2>
+          <p>
+            We do not sell, rent, or trade your personal information. We may
+            share information in the following limited circumstances:
+          </p>
+          <ul>
+            <li>
+              <strong>Service providers:</strong> We may share information with
+              trusted third-party vendors (hosting providers, email delivery
+              services) who assist us in operating our Services. These vendors
+              are contractually required to keep your information confidential
+              and to use it only to perform services on our behalf.
+            </li>
+            <li>
+              <strong>Legal compliance:</strong> We may disclose information if
+              required to do so by law, court order, or governmental authority,
+              or when we believe in good faith that disclosure is necessary to
+              protect our rights, protect your safety or the safety of others,
+              or investigate fraud.
+            </li>
+            <li>
+              <strong>Business transfers:</strong> If Neurality-Inc is involved
+              in a merger, acquisition, or sale of assets, your information may
+              be transferred as part of that transaction. We will notify you
+              before your personal information is transferred and becomes subject
+              to a different privacy policy.
+            </li>
+          </ul>
+
+          <h2>5. Data Retention &amp; Security</h2>
+          <p>
+            We retain personal information for as long as necessary to fulfil
+            the purposes described in this policy, or as required by applicable
+            law. When we no longer need your information, we will securely
+            delete or anonymise it.
+          </p>
+          <p>
+            We take reasonable technical and organisational measures to protect
+            your information from unauthorised access, loss, or misuse.
+            However, no method of transmission over the internet or electronic
+            storage is completely secure. We cannot guarantee absolute security,
+            and you use our Services at your own risk.
+          </p>
+
+          <h2>6. Your Rights &amp; Choices</h2>
+          <p>
+            Depending on where you are located, you may have certain rights
+            regarding your personal information, including:
+          </p>
+          <ul>
+            <li>
+              <strong>Access:</strong> Request a copy of the personal
+              information we hold about you.
+            </li>
+            <li>
+              <strong>Correction:</strong> Request that we correct inaccurate
+              or incomplete information.
+            </li>
+            <li>
+              <strong>Deletion:</strong> Request that we delete your personal
+              information, subject to certain legal exceptions.
+            </li>
+            <li>
+              <strong>Objection / restriction:</strong> Object to or request
+              that we restrict certain processing of your information.
+            </li>
+            <li>
+              <strong>Portability:</strong> Request a machine-readable copy of
+              your information in certain circumstances.
+            </li>
+          </ul>
+          <p>
+            To exercise any of these rights, please contact us at{" "}
+            <a
+              href="mailto:privacy@neurality.dev"
+              style={{ color: "var(--accent)" }}
+            >
+              privacy@neurality.dev
+            </a>
+            . We will respond to your request within 30 days.
+          </p>
+
+          <h2>7. Children&apos;s Privacy</h2>
+          <p>
+            Our Services are not directed to children under the age of 13
+            (or a higher minimum age where required by local law). We do not
+            knowingly collect personal information from children. If you believe
+            we have inadvertently collected information from a child, please
+            contact us and we will promptly delete it.
+          </p>
+
+          <h2>8. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. When we do, we
+            will revise the "Effective date" at the top of this page and, where
+            appropriate, notify you by email or through a notice in our Services.
+            We encourage you to review this policy periodically. Your continued
+            use of the Services after changes become effective constitutes your
+            acceptance of the updated policy.
+          </p>
+
+          <h2>9. Contact</h2>
+          <p>
+            If you have questions or concerns about this Privacy Policy or our
+            data practices, please contact us at:
+          </p>
+          <p>
+            <strong>Neurality-Inc</strong>
+            <br />
+            Email:{" "}
+            <a
+              href="mailto:privacy@neurality.dev"
+              style={{ color: "var(--accent)" }}
+            >
+              privacy@neurality.dev
+            </a>
+          </p>
+        </div>
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
+  );
+}
