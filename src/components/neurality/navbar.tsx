@@ -36,6 +36,7 @@ export function Navbar() {
             className="brand-logo"
             width={40}
             height={40}
+            fetchPriority="high"
           />
           <span>Neurality</span>
         </Link>

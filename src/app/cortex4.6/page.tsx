@@ -181,13 +181,6 @@ export default function Cortex46Page() {
             </div>
           </div>
         </section>
-
-        {/* Closing wordmark */}
-        <div className="container">
-          <p className="model-wordmark" aria-hidden="true">
-            Cortex 4.6
-          </p>
-        </div>
       </main>
       <Footer />
       <BackToTop />

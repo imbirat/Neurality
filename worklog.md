@@ -20,3 +20,21 @@ Stage Summary:
 - Navbar matches spec: logo+Neurality left, Try Cortex (/cortex) + Docs (https://axionbot.qzz.io) right.
 - Footer matches spec: 3-column with Products (Cortex, Cortex 4.6, Cortex code, Axion) and Legal (Terms, Privacy), © 2026 Neurality-Inc.
 - Production-ready, responsive, accessible, lint-clean.
+
+---
+Task ID: 2
+Agent: main (Z.ai Code)
+Task: Optimize page loading speed and remove the big decorative wordmark text ("Cortex 4.6" / "Cortex Code") from /cortex4.6 and /cortexcode pages.
+
+Work Log:
+- Identified root cause of slow loading: layout.tsx imported Geist + Geist_Mono from next/font/google, but neurality.css uses system fonts for the body — so 2 render-blocking Google Font requests were downloaded but never used.
+- Removed Geist & Geist_Mono imports from src/app/layout.tsx; simplified body className to just "antialiased".
+- Removed the ".model-wordmark" closing section (big decorative text) from src/app/cortex4.6/page.tsx and src/app/cortexcode/page.tsx. The H1 page titles ("Cortex 4.6", "Cortex Code") remain intact.
+- Added fetchPriority="high" to the navbar logo img for faster LCP on above-the-fold content.
+- Ran `bun run lint` — clean.
+- Agent Browser verification: confirmed 0 font network requests (was 2), system font-family active, no console errors; .model-wordmark count = 0 on both /cortex4.6 and /cortexcode while H1 titles remain; page heights reduced (cortex4.6 1822px, cortexcode 1778px).
+
+Stage Summary:
+- Loading optimized: eliminated 2 unused render-blocking Google Font requests; design now uses native system fonts (zero font network overhead).
+- Big wordmark text removed from /cortex4.6 and /cortexcode as requested.
+- Lint clean, no errors, all pages verified rendering correctly.
